@@ -21,4 +21,5 @@ WIREFRAMES
 
 
 GAME MECHANICS
-- 
+- use multiple functions in js to create a deck of cards, play the game, compare sums of player vs dealer, decide winner
+- style and make a blackjack like table using css
