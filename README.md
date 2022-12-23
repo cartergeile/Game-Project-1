@@ -1,5 +1,6 @@
 # Game-Project-1
 Project 1 - Creating a game
+
 BLACKJACK
 -you play against the dealer and see who can get closer to 21 without going over
 - you and the dealer will both be dealt two cards, both of yours are face up, the dealer has one hidden.
@@ -11,6 +12,11 @@ BLACKJACK
 USER STORIES
 - as the user I want to beat the dealer hand that is dealt.
 - I will use logic along with basic addition to chose wether I hit or stand based on what the dealer is showing
+
+TECHNOLOGIES USED
+- HTML
+- CSS
+- Vanilla JavaScript
 
 
 WIREFRAMES
