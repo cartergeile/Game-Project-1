@@ -21,10 +21,6 @@ TECHNOLOGIES USED
 
 WIREFRAMES
 
-![IMG_6330](https://user-images.githubusercontent.com/120063867/209358319-564e7b16-8c77-4fea-85be-347efebf0896.jpg)
-
-
-![IMG_6331](https://user-images.githubusercontent.com/120063867/209358444-ac81823d-0d53-4bb0-8921-9cd7edcd2b02.jpg)
 
 GAME MECHANICS
 - use multiple functions in js to create a deck of cards, play the game, compare sums of player vs dealer, decide winner
