@@ -16,9 +16,9 @@
 - JAVASCRIPT
 
 # WIREFRAMES
-!(IMG_6331.jpg)
+![IMG_6330](https://user-images.githubusercontent.com/120063867/209583477-9c49991e-ed8f-4085-9989-a2a41090736e.jpg)
 
-
+![IMG_6331](https://user-images.githubusercontent.com/120063867/209583504-3d207bf5-9e7c-4785-87d1-153d67aac490.jpg)
 
 
 

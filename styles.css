@@ -31,13 +31,24 @@ button {
   gap: 10px;
 }
 
+.card { 
+  height: 120px;
+  width: 120px;
+  border: 2px solid black;
+  padding-top: 60px;
+  border-radius: 10px; 
+  font-size: 3rem;
+  text-align: center;
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
 .card[data-red=true] {
   color: red;
 }
 
 .back {
   content: '';
-  background-color: blue;
+  background-color: red;
 }
 
 .container {
