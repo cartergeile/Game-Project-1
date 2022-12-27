@@ -1,4 +1,4 @@
-// deck of cards - 52
+// 5 deck of cards with 52 in each
 // shuffle several decks
 // select a card(random) 
 // deal hands to dealer and player (hide one of dealers card)
@@ -77,14 +77,22 @@ const dealHands = () => {
 // tell player what value of hand is
 const calcValue = (hand) => {
   let value = 0
+  let hasAce = 0
   hand.forEach((card) => {
     if (card.length === 2) {
+    if (card[0] === 'A') {
+        hasAce += 1
+    } else {
       (card[0] === 'K' || card[0] === 'Q' || card[0] === 'J') ? value+=10 : value += Number(card[0])
     }
-    else {
+  } else {
       value += 10
     }
   })
+  if (hasAce > 0) {
+      value + 11 > 21 ? value +=1 : value += 11 
+      value += (hasAce-1)*1
+  }
   return value
 }
 
@@ -100,12 +108,58 @@ const hitPlayer = () => {
     alert("bust")
   }
 }
-hitButton.addEventListener('click', hitPlayer)
 
+const decideWinner = async() => {
+  let dealerValue = await calcValue(dealerHand)
+  let playerValue = await calcValue(playerHand)
+
+  alert(`Dealer has ${dealerValue}, you have ${playerValue}`)
+  dealerValue > playerValue ? alert("Dealer Wins!") : alert("Player Wins!")
+}
+// stay/dealer runout button
+// add event listener
+// if player chooses the stay the dealers hand will run out logically
+// calculate dealer hand
+// if dealer has less than 16 forced to hit(add card)
+// if value = 21 dealer wins
+// if value is more than 21 dealer busts
+// else decide whos value is higher
+
+const hitDealer = async() => {
+  // flip over dealers hidden card
+  const hiddenCard = dealer.children[0]
+  hiddenCard.classList.remove("back")
+  hiddenCard.innerHTML = dealerHand[0]
+  // calc hand value
+  let handValue = await calcValue(dealerHand)
+  if (handValue < 16) {
+    let newCard = selectRandomCard()
+    dealerHand.push(newCard)
+    const newCardNode = cardModel.cloneNode(true);
+    newCardNode.innerHTML = newCard;
+    dealer.append(newCardNode)
+    handValue = await calcValue(dealerHand)
+  }
+  if (handValue < 16) {
+    hitDealer()
+  }
+  else if (handValue === 21) {
+    alert("Dealer has 21!")
+  }
+  else if (handValue > 21) {
+    alert("Dealer Bust!")
+  }
+  else {
+    decideWinner()
+  }
+}
+
+
+hitButton.addEventListener('click', hitPlayer)
+stayButton.addEventListener('click', hitDealer)
 
 
 
 
 shuffleDecks(5)
-const randomCard = selectRandomCard()
 dealHands()
