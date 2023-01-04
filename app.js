@@ -163,3 +163,6 @@ stayButton.addEventListener('click', hitDealer)
 
 shuffleDecks(5)
 dealHands()
+
+// need to change alert to text on page 
+// to to redeal and start new game without refreshing the page
