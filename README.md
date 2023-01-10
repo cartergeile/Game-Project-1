@@ -6,6 +6,8 @@
 - If the dealer goes over 21 and the player is at 21 or lower, the player wins.
 - If the player goes over 21(bust), the player automatically loses; or if player's sum is lower than the dealers sum, you lose.
 
+# PLAY HERE
+[Blackjack] (https://cartergeile.github.io/Game-Project-1/)
 # USER STORIES
 - As the user I want to beat the dealer's hand that is dealt.
 - I will use logic along with basic addition to chose wether I hit or stand based on what the dealer is showing.
